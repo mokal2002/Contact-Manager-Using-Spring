@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
+<head>
+    <title data-th-text="${loggedInUser.name}">Home</title>
+</head>
+
+<body>
+    <div id="content" class="flex justify-center items-center min-h-screen">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold pt-20 text-green-500">Success</h1>
+            <p class="mt-4 text-lg">Your message was successful submited.</p>
+            <button
+                class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 focus:ring-4 focus:ring-green-300">
+                <a data-th-href="@{'/'}"> Go Back</a>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        console.log("this is profile page");
+    </script>
+</body>
+
+</html>
